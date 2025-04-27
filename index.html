@@ -1,0 +1,98 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Transacciones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sección Presupuesto  -->
+  <div class="container-fluid px-0">
+    <div id="resumen-financiero" class="presupuesto">
+      <div class="container">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <h2 id="titulo" class="titulo">Presupuesto de abril 2025</h2>
+            <h2 id="saldoTotal" class="texto balance">$0.00</h2>
+            <div class="d-flex flex-column align-items-center text-light">
+              <button id="totalIngresos" class="btn btn-primary mb-2 w-75">INGRESOS: $0.00</button>
+              <button id="totalEgresos" class="btn btn-light mb-2 w-75 text-dark">EGRESOS: $0.00</button>
+              <p class="texto-gastos">Porcentaje de gastos: <span id="porcentajeGastos" class="texto-porcentaje">0%</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="container py-4 card-container">
+    <div class="row g-4">
+
+      <!-- Formulario para registrar -->
+      <div class="col-12 col-lg-6">
+        <div id="formulario-transacciones" class="card shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title mb-4"><i class="fa-solid fa-building-columns"></i> Transacción</h3>
+            <form>
+              <div class="mb-3">
+                <label for="tipoTransaccion" class="form-label">Tipo de Transacción:</label>
+                <select id="tipoTransaccion" class="form-select">
+                  <option value="Ingreso">Ingreso</option>
+                  <option value="Egreso">Egreso</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción:</label>
+                <input type="text" id="descripcion" class="form-control" placeholder="Ej. Salario">
+              </div>
+              <div class="mb-3">
+                <label for="monto" class="form-label">Monto:</label>
+                <input type="number" id="monto" class="form-control" placeholder="0.00">
+              </div>
+              <div class="text-center">
+                <button id="submitBtn" class="btn btn-primary w-50">Agregar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- tabla de lista ingresos y egresos -->
+      <div class="col-12 col-lg-6">
+        <div id="visualizacion-tablas" class="card shadow-sm">
+          <div class="card-body">
+            <div id="botones-segmentados" class="d-flex gap-2 mb-4">
+              <button onclick="toggleTables('ingresos')" class="btn btn-dark flex-fill">Ingresos</button>
+              <button onclick="toggleTables('egresos')" class="btn btn-light flex-fill">Egresos</button>
+            </div>
+            <div id="tabla-ingresos">
+              <h4 class="h5 mb-3"><i class="fa-solid fa-money-bill-transfer"></i> Ingresos</h4>
+              <ul class="list-group list-group-flush"></ul>
+            </div>
+            <div id="tabla-egresos" class="hidden">
+              <h4 class="h5 mb-3"><i class="fa-solid fa-money-bill-transfer"></i> Egresos</h4>
+              <ul class="list-group list-group-flush"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://kit.fontawesome.com/384e997431.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #252525;
+}
+.presupuesto {
+  position: relative;
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('/assets/img/bank-banner.png') no-repeat center center;
+  background-size: cover;
+  height: 55%;
+}
+
+/* Elevar las cards y suavizar bordes */
+.card {
+  background-color: rgba(27,31,34,0.9); /* fondo oscuro ligeramente translúcido */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border: none;  /* quita borde por defecto */
+}
+/* Cards background-color */
+#formulario-transacciones.card,
+#visualizacion-tablas.card {
+  background-color: #202020;
+  color: #28a745;
+}
+
+/* Inputs y selects */
+.form-control,
+.form-select {
+  background-color: #242525;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 4px;
+}
+.form-control::placeholder {
+  color: #bbb;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #28a745;
+  border-color: #28a745;
+  transition: background-color .2s;
+ 
+}
+.btn-primary:hover {
+  background-color: #eaf0eb;
+  color :#28a745;
+  border-color:#28a745;
+}
+
+/* Tablas y listas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+/* List group items */
+.list-group-item {
+  background-color: #242525;
+  color: #fff;
+  border: 1px solid #444;
+}
+.hidden {
+  display: none !important;
+}
+
+/* Textos */
+.titulo {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #e7e7e7;
+}
+.balance {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.texto-porcentaje {
+  font-size: 1rem;
+  font-weight: bold;
+  color:#ffffff;
+}
+.texto {
+  font-size: 2rem;
+  font-weight: bold;
+  color:#28a745;
+  margin-top: 8px;
+}
+
+.texto-gastos{
+ font-size: 1rem;
+  color: white;
+}
+
+/* Media Queries */
+
+@media (min-width: 576px) {
+  .presupuesto { height: 300px; }
+}
+@media (min-width: 768px) {
+  .presupuesto { height: 400px; }
+}
+@media (min-width: 992px) {
+  .presupuesto { height: 600px; }
+}
+@media (min-width: 1200px) {
+  .presupuesto { height: 800px; }
+}
