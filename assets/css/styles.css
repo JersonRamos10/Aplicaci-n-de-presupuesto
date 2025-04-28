@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #252525;
+  background: #111111;
 }
 .presupuesto {
   position: relative;
@@ -14,10 +14,10 @@ body {
 
 /* Elevar las cards y suavizar bordes */
 .card {
-  background-color: rgba(27,31,34,0.9); /* fondo oscuro ligeramente translúcido */
+  background-color: rgba(27,31,34,0.9); 
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  border: none;  /* quita borde por defecto */
+  border: none; 
 }
 /* Cards background-color */
 #formulario-transacciones.card,
